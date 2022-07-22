@@ -58,24 +58,73 @@ function atualizaEstatisticas(peca) {
 }
 
 //alterando cor do robo
+let btnTrocaCor = document.getElementById("btn-cor");
+let cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"];
+let i = -1;
 
-
-let btnTrocaCor = document.getElementById("btn-cor")
-
-function trocaCor() {
-    let imagem = document.querySelector(".robo")
-    let cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"]
-    cores.forEach((cor) => {
-    imagem.setAttribute('src', 'img/' + cor + '.png')
-    })
-}
-
-btnTrocaCor.addEventListener("click", () => {
+btnTrocaCor.addEventListener("click", (event) => {
     event.preventDefault()
-    trocaCor()
+    i = (i+1)%cores.length
+    let imagem = document.querySelector(".robo")
+    imagem.src = `./img/${cores[i]}.png`
 })
 
 
+
+// ainda percorre todo o array e fica rosa
+// let btnTrocaCor = document.getElementById("btn-cor")
+
+// function trocaCor() {
+//     let imagem = document.querySelector(".robo")
+//     let cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"]
+//     for (i = 0; i < cores.length; i++) {
+//         var cor = cores.at(i)
+//         imagem.src = `./img/${cor}.png`
+//     }
+// }
+
+// btnTrocaCor.addEventListener("click", () => {
+//     event.preventDefault()
+//     trocaCor()
+
+// })
+
+
+// dessa forma cor retorna como undefined
+// let btnTrocaCor = document.getElementById("btn-cor")
+
+// function trocaCor() {
+//     const cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"]
+//     cores.forEach((cor) => {
+//     return cor
+//     })
+// }
+
+// btnTrocaCor.addEventListener("click", () => {
+//     event.preventDefault()
+//     let imagem = document.querySelector(".robo")
+//     imagem.src = `./img/${trocaCor()}.png`
+// })
+
+
+// segunda tentativa vai direto para ultima cor rosa
+// let btnTrocaCor = document.getElementById("btn-cor")
+
+// function trocaCor() {
+//     let imagem = document.querySelector(".robo")
+//     let cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"]
+//     cores.forEach((cor) => {
+//     imagem.setAttribute('src', 'img/' + cor + '.png')
+//     })
+// }
+
+// btnTrocaCor.addEventListener("click", () => {
+//     event.preventDefault()
+//     trocaCor()
+// })
+
+
+// primeira tentativa
 // const imagem = document.querySelector(".robo")
 // const btnTrocaCor = document.getElementById("btn-cor")
 // const cores = ["amarelo", "vermelho", "branco", "preto", "azul", "rosa"]
