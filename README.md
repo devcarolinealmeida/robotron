@@ -1,7 +1,7 @@
 # Robotron
 > Project developed during Alura's javaScript class with a new feature to change the color of the robot
 
-![robotron](https://user-images.githubusercontent.com/104517812/180424384-a451e0cb-989d-4d87-b375-c9d8b6b4cd3d.png)
+![robotron](https://user-images.githubusercontent.com/104517812/180424384-a451e0cb-989d-4d87-b375-c9d8b6b4cd3d.png)(https://devcarolinealmeida.github.io/robotron/)
 
 The final challenge of this project was to create a new feature to change the robot image using click events.
 
